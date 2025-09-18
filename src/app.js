@@ -3,6 +3,7 @@ import helmet from "helmet";
 import cors from "cors";
 import morgan from "morgan";
 import config from "./config/index.js";
+import router from "./routes/index.js";
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/api/v1/health", (_req, res) => {
   return res.status(200).json({ success: true, message: "Server is running" });
 });
+
+app.use("/api", router);
 
 app.all("/*path", (_req, res) => {
   return res.status(404).json({ success: false, message: "Route not found" });

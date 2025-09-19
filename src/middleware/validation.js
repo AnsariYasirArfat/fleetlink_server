@@ -10,8 +10,8 @@ export const validateVehicle = [
     .isInt({ min: 1, max: 50000 })
     .withMessage("Capacity must be between 1 and 50000"),
   body("tyres")
-    .isInt({ min: 4, max: 18 })
-    .withMessage("Tyres must be between 4 and 18"),
+    .isInt({ min: 4, max: 32 })
+    .withMessage("Tyres must be between 4 and 32"),
 ];
 
 export const validateAvailabilitySearch = [

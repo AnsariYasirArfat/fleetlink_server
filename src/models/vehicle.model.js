@@ -23,7 +23,7 @@ const vehicleSchema = new mongoose.Schema(
         type : Number,
         required: true,
         min: [4, "Vehicle must have at least 4 tyres"],
-        max: [18, "Vehicle cannot have more than 18 tyres"]
+        max: [32, "Vehicle cannot have more than 32 tyres"]
     }
   },
   { timestamps: true }
